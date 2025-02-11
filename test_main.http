@@ -1,0 +1,23 @@
+### Test creating a call
+POST http://localhost:8000/calls
+Content-Type: application/json
+
+{
+  "to_number": "+201289859363",
+  "message": "Hello, this is a test call."
+}
+
+### Test fetching call status
+GET http://localhost:8000/calls/CAdf2d8ffbb6cd027b81b2eb27371ade4c
+
+### Test creating a call with invalid number
+POST http://localhost:8000/calls
+Content-Type: application/json
+
+{
+  "to_number": "+20128985936",
+  "message": "This should fail."
+}
+
+### Test fetching status of invalid call SID
+GET http://localhost:8000/calls/invalid-sid
