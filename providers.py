@@ -10,11 +10,11 @@ from models import CallStatus
 
 class CallProvider:
     def __init__(self):
-        self.account_sid = os.getenv("TWILIO_ACCOUNT_SID", "AC8a7cdb4007f0fa2d6478684de2507071")
-        self.auth_token = os.getenv("TWILIO_AUTH_TOKEN", "aa66038e12ef164ba05be1e31f045537")
-        self.phone_number = os.getenv("TWILIO_PHONE_NUMBER", "+17192495030")
+        self.account_sid = os.getenv("TWILIO_ACCOUNT_SID", "00000000000000000000000000")
+        self.auth_token = os.getenv("TWILIO_AUTH_TOKEN", "0000000000000000")
+        self.phone_number = os.getenv("TWILIO_PHONE_NUMBER", "+000000000000000")
         self.twiml_bin_url = os.getenv("TWIML_BIN_URL",
-                                       "https://handler.twilio.com/twiml/EH4de5706bd7f1193d7bf7a737daccdd57")
+                                       "https://handler.twilio.com/twiml/000000000000000")
 
         if not all([self.account_sid, self.auth_token, self.phone_number, self.twiml_bin_url]):
             raise ValueError("Missing required Twilio credentials or TwiML Bin URL")
